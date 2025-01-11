@@ -14,7 +14,7 @@ resource "aws_lambda_function" "http_api_lambda" {
   role             = aws_iam_role.lambda_exec.arn
 
   environment {
-    variables = {} # todo: fill with apporpriate value
+    variables = {DYNAMODB_TABLE = "shakee-topmovies"} # todo: fill with apporpriate value
   }
 }
 
